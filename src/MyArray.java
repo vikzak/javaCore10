@@ -16,6 +16,10 @@ public class MyArray {
     }
 
     public static void printCounterWords(String[] getCountArray){
-
+        Map<String, Integer> counterWordArray = new HashMap<>();
+        for (String word : getCountArray) {
+            counterWordArray.put(word, counterWordArray.getOrDefault(word, 0) + 1);
+        }
+        System.out.println("Количество повторяющихся слов:\n" + counterWordArray + "\n");
     }
 }

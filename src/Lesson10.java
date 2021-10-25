@@ -12,8 +12,22 @@ import java.util.Arrays;
 **/
 public class Lesson10 {
     public static void main(String[] args) {
+        // ------- задание №1 -------
         String[] myArray = MyArray.getArray();
         System.out.println("Исходный массив:\n" + Arrays.asList(myArray));
         MyArray.printUniqueWords(myArray);
+        MyArray.printCounterWords(myArray);
+        // ------- задание №2 -------
+        MyPhoneBook myPhoneBook = new MyPhoneBook();
+        myPhoneBook.add("Иванов", "+7(903)789-46-56");
+        myPhoneBook.add("Петров", "+7(903)222-46-56");
+        myPhoneBook.add("Сидоров", "+7(903)333-46-56");
+        myPhoneBook.add("Колесников", "+7(903)444-46-56");
+        myPhoneBook.add("Васильев", "+7(903)555-55-56");
+        myPhoneBook.add("Петров", "+7(903)888-88-88");
+        myPhoneBook.add("Петров", "+7(903)777-77-77");
+        System.out.println("Телефоны сотрудника:" + myPhoneBook.getLastName("Петров"));
+        // все номера и сотрудники (объединены)
+        //myPhoneBook.print();
         }
 }
